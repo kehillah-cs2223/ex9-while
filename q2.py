@@ -1,32 +1,36 @@
 """
 Question 2
 
-tl;dr Rewrite with `while` instead of `for`
+tl;dr Rewrite with `while` and make it go on **forever**
 
-Here's a `for`-loop implementation of factorial.
-Re-write this function with a `while` loop instead.
+Hint: Remember to remove the parameter
+
+This is function from Textbook Exercises #2 that draws a rectangular spiral.
+Before, we only knew for loops, so we had to say what the max_side length was.
+
+But now we know about `while` loops!
+
+Make a new version of draw_rectangular_spiral that keeps spiralling outwards
+until the program is closed.
 """
 
-def factorial(n):
-    """
-    Return the factorial of n, an integer >= 1
+from turtle import *
 
-    >>> factorial(1)
-    1
-    >>> factorial(3)
-    6
-    >>> factorial(30)
-    265252859812191058636308480000000
-    """
-    product = 1
+
+####### EDIT THIS FUNCTION DECLARATION #######
+# Remove the parameter `max_side`
+def draw_rectangular_spiral(max_side):
+    """Draw a rectangular spiral, starting in the center.
+    
+    `max_side` is the length of the longest side of the spiral in pixels"""
     
     ####### EDIT THIS FOR LOOP! #######
-    # Rewrite with `while` instead of `for`
-    for i in range(1, n + 1):
-       product = product*i
-    return product
+    # Rewrite with `while` and make it go on **forever**
+    for side_length in range(1, max_side + 1, 5):
+        forward(side_length)
+        right(90)
 
-if __name__ == "__main__":
-    import doctest
-    # This line will run the tests. If there's no output, that's good!
-    doctest.testmod()
+####### EDIT THIS FUNCTION CALL #######
+# Remove the argument
+draw_rectangular_spiral(100)
+
