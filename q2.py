@@ -9,12 +9,14 @@ Re-write this function with a `while` loop instead.
 
 def factorial(n):
     """
-    Factorial Function
+    Return the factorial of n, an integer >= 1
 
-    For n >= 1:
-
-    n! = n * (n-1) * (n-2) * ... * 1
-
+    >>> factorial(1)
+    1
+    >>> factorial(3)
+    6
+    >>> factorial(30)
+    265252859812191058636308480000000
     """
     product = 1
     
@@ -24,8 +26,7 @@ def factorial(n):
        product = product*i
     return product
 
-# This code will compare your answers to the correct ones:
-print(f"{factorial(1)=}  <-- this should be {math.factorial(1)}")
-print(f"{factorial(3)=}  <-- this should be {math.factorial(3)}")
-print(f"{factorial(5)=}  <-- this should be {math.factorial(5)}")
-print(f"{factorial(6)=}  <-- this should be {math.factorial(6)}")
+if __name__ == "__main__":
+    import doctest
+    # This line will run the tests. If there's no output, that's good!
+    doctest.testmod()
