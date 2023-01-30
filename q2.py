@@ -1,7 +1,10 @@
 """
-Here's a for-loop implementation of factorial.
+Question 2
 
-Re-write this function with a while loop instead.
+tl;dr Rewrite with `while` instead of `for`
+
+Here's a `for`-loop implementation of factorial.
+Re-write this function with a `while` loop instead.
 """
 
 def factorial(n):
@@ -14,6 +17,9 @@ def factorial(n):
 
     """
     product = 1
+    
+    ####### EDIT THIS FOR LOOP! #######
+    # Rewrite with `while` instead of `for`
     for i in range(1, n + 1):
        product = product*i
     return product
